@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+
+<template>
+    <div>
+        <div class="top_div"></div>
+        <p style="padding: 30px 0px 10px; position: relative;"><span
+                class="u_logo"></span> <input id="loginName" class="ipt" type="text" v-model="userName" placeholder="请输入用户名"
+                                              value="">
+        </p>
+        <p style="position: relative;"><span class="p_logo"></span>
+            <input class="ipt" id="password" type="password" v-model="password" placeholder="请输入密码" value="">
+        </p>
+        <p style="position: relative;margin-top: 10px;"><span class="p_logo"></span>
+            <input class="ipt" id="password2" type="password" v-model="password2" placeholder="请输入密码" value="">
+        </p>
+
+
+        <div id="errorText" style="height: 20px;margin-top:10px">
+            <p style="color: #ff0000;display: none">用户名密码错误请从新输入</p>
+        </div>
+        <div
+                style="height: 50px; line-height: 50px; margin-top: 30px; border-top-color: rgb(231, 231, 231); border-top-width: 1px; border-top-style: solid;">
+            <!--        <p style="margin: 0px 35px 20px 45px;"><span style="float: left;"><a style="color: rgb(204, 204, 204);"-->
+            <!--                                                                             href="#">忘记密码?</a></span>-->
+            <router-link to='/'>
+                <span style="float: left;margin-left: 10px;font-size: 14px;">已有账号，现在登录</span>
+            </router-link>
+
+            <span style="float: right;">
+              <a id="loginBtn" @click="register()">注册</a>
+           </span></div>
+    </div>
+    </div>
+</template>
+
+
+</body>
+</html>
